@@ -5,7 +5,7 @@ async function makeRequest(ctx, url, options) {
 
   ctx.response.status = response.status;
   ctx.response.body = response.body;
-  ctx.response.headers.delete("Access-Control-Allow-Origin");
+  // ctx.response.headers.delete("Access-Control-Allow-Origin");
 
   for (const [name, value] of response.headers) {
     ctx.response.headers.append(name, value);
